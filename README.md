@@ -1,4 +1,4 @@
-# ChangeAppIconProgramatically
+# Change AppIcon Programatically
 
 Change your app’s icon programmatically in iOS 10.3
 
