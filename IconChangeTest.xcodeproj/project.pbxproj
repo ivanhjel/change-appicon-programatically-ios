@@ -27,6 +27,7 @@
 		2C52A190206154830005758B /* Icon5@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C52A181206154830005758B /* Icon5@3x.png */; };
 		2C52A191206154830005758B /* Icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C52A182206154830005758B /* Icon3.png */; };
 		2C52A192206154830005758B /* Icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C52A183206154830005758B /* Icon1.png */; };
+		46997AF12C1DA38700195EF8 /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46997AF02C1DA38700195EF8 /* AppIcon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		2C52A181206154830005758B /* Icon5@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon5@3x.png"; sourceTree = "<group>"; };
 		2C52A182206154830005758B /* Icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon3.png; sourceTree = "<group>"; };
 		2C52A183206154830005758B /* Icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon1.png; sourceTree = "<group>"; };
+		46997AF02C1DA38700195EF8 /* AppIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				2C52A17420614E1D0005758B /* AppIcons */,
 				2C52A16220614DD60005758B /* AppDelegate.swift */,
 				2C52A16420614DD60005758B /* ViewController.swift */,
+				46997AF02C1DA38700195EF8 /* AppIcon.swift */,
 				2C52A16620614DD60005758B /* Main.storyboard */,
 				2C52A16920614DD60005758B /* Assets.xcassets */,
 				2C52A16B20614DD60005758B /* LaunchScreen.storyboard */,
@@ -207,6 +210,7 @@
 			files = (
 				2C52A16520614DD60005758B /* ViewController.swift in Sources */,
 				2C52A16320614DD60005758B /* AppDelegate.swift in Sources */,
+				46997AF12C1DA38700195EF8 /* AppIcon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
