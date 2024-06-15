@@ -12,13 +12,13 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    let icons = ["Icon1", "Icon2", "Icon3", "Icon4", "Icon5"]
-    let names  = ["Taco", "Pizza", "HotDog", "Hamburger", "Donut"]
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
+    let icons = [
+        AppIcon(name: "Taco", imageName: "Icon1"),
+        AppIcon(name: "Pizza", imageName: "Icon2"),
+        AppIcon(name: "HotDog", imageName: "Icon3"),
+        AppIcon(name: "Hamburger", imageName: "Icon4"),
+        AppIcon(name: "Donut", imageName: "Icon5")
+    ]
 
     func setIcon(name: String) {
         let app = UIApplication.shared
@@ -27,38 +27,35 @@ class ViewController: UIViewController {
                 app.setAlternateIconName(name, completionHandler: { (error) in
                     if error != nil {
                         print("error => \(String(describing: error?.localizedDescription))")
-                    }else {
+                    } else {
                         print("Changed Icon Sucessfully.")
                     }
                 })
             }
         }
     }
-
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return icons.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "icons", for: indexPath)
-        let name = names[indexPath.row]
-        cell.textLabel?.text = name
+        let icon = icons[indexPath.row]
+        cell.textLabel?.text = icon.name
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let icon = icons[indexPath.row]
-        setIcon(name: icon)
+        setIcon(name: icon.imageName)
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Press any cell to change AppIcon"
     }
-
 }
-
